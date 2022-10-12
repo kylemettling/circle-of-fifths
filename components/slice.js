@@ -5,7 +5,10 @@ const Slice = ({ item }) => {
 		<div className='slice'>
 			<span>Hello!</span>
 			<pre>{JSON.stringify(item, null, 4)}</pre>
-			<SignatureSVG />
+			<SignatureSVG
+				type={item.accidentals.type}
+				count={item.accidentals.count}
+			/>
 			{/* <Image
 				alt={item.major}
 				src={`/images/${item.accidentals.count + item.accidentals.type}.svg`}

@@ -16,6 +16,8 @@ a {
 }
 .slice {
 	outline: 3px solid white;
+	padding: 15px;
+	margin: 15px;
 }
 
 @media (prefers-color-scheme: dark) {

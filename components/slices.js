@@ -3,10 +3,11 @@ import signatures from "../lib/state/signatures";
 import Image from "next/image";
 
 const Slices = () => {
-  const keys = [...Array(12).keys()].map((idx) => {
+  const keys = [...Array(signatures.length).keys()].map((sig, idx) => {
     const item = signatures[idx];
     const newItem = {
       index: idx,
+      position: idx,
       image: `${
         item.accidentals ? item.accidentals.count + item.accidentals.type : null
       }`,
@@ -14,20 +15,10 @@ const Slices = () => {
     };
     return newItem;
   });
-
   return (
-    <div>
-      {/* {items} */}
+    <div className="slices">
       {keys.map((item) => {
         return <Slice key={item.index} item={item} />;
-        // return (
-        // 	<Image
-        // 		src={`/images/${item.image}.svg`}
-        // 		key={item.index}
-        // 		alt='test'
-        // 		height={'300px'}
-        // 		width={'300px'}
-        // 	/>
       })}
     </div>
   );

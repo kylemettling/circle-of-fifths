@@ -1,67 +1,140 @@
 :root {
-	/* Colors */
-	--lightBlue: #417ac4;
-	--blue: #2e5589;
-	--purple: #5c4dc4;
-	--lightGreen: #41c4a0;
-	--green: #2e8970;
-	--black: #343e4c;
-	--cream: #c3af6f;
-	--white: #e5e9dc;
-	/* --cream: #e5b641; */
-	/* Color Intentions */
-	--background: var(--black);
-	--outlineColor: var(--black);
-	--sliceBackground: var(--blue);
-	--textColor: var(--white);
-	--signatureBackground: var(--blue);
-	--sliceBackground: var(--blue);
+  /* Colors */
+  --lightBlue: #417ac4;
+  --blue: #2e5589;
+  --purple: #5c4dc4;
+  --lightGreen: #41c4a0;
+  --green: #2e8970;
+  --black: #343e4c;
+  --cream: #c3af6f;
+  --white: #e5e9dc;
+  /* --cream: #e5b641; */
+  /* Color Intentions */
+  --background: var(--lightBlue);
+  --outlineColor: var(--black);
+  --sliceBackground: var(--blue);
+  --textColor: var(--white);
+  --signatureBackground: var(--blue);
+  --sliceBackground: var(--blue);
 }
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container {
-	/* width: 1200px; */
-	margin: 0 auto;
-	padding: 0 19%;
+  /* width: 1200px; */
+  margin: 0 auto;
+  padding: 0;
+}
+.slices {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  /* border-radius: 50%; */
+  width: 500px;
+  margin: 0 auto;
+  /* gap: 100px; */
+}
+.topper {
+  /* position: absolute; */
+  display: flex;
+  /* width: 400px; */
+  /* margin: 0 auto; */
+  /* height: 25px; */
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  /* transform-origin: 0% 100%; */
+  /* transform: skew(-50deg); */
+  /* transform: translate(-50%, -50%); */
+  /* border-radius: 100% 100% 0 0; */
+  /* top: 20%; */
+  /* left: 50%; */
+  /* right: 50%; */
+  /* clip-path: circle(100% at 11%); */
+  /* width: 100%; */
+  color: black;
+  background: green;
+  /* position: fixed; */
+  /* top: 30px; */
 }
 .slice {
-	outline: 3px solid var(--lightBlue);
-	padding: 15px;
-	margin: 15px;
-	background-color: var(--sliceBackground);
+  /* position: fixed; */
+  /* outline: 3px solid var(--lightBlue); */
+  /* width: 450px; */
+  padding: 0;
+  margin: 0 auto;
+  /* top: -20px; */
+  background-color: var(--sliceBackground);
+  /* transform-origin: 100% 100%; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* border-top: 2px solid var(--outlineColor); */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  /* outline: 4px solid var(--textColor); */
+}
+.sliceCopy {
+  /* position: fixed; */
+  outline: 3px solid var(--lightBlue);
+  /* width: 490px; */
+  /* height: calc(100% - 2px); */
+  padding: 0;
+  /* margin: 100px auto; */
+  /* margin: 0 auto; */
+  background-color: var(--background);
+  /* border-top: 2px solid var(--outlineColor); */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  /* outline: 4px solid var(--textColor); */
+}
+.slice:hover,
+.sliceCopy:hover {
+  outline: 2px solid white;
 }
 .signature {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	background-color: var(--background);
-	margin: 35px;
-	padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--background);
+  /* padding: 0; */
+  /* z-index: 9999; */
+  /* margin-top: -150px; */
+  /* margin: 15px; */
+  /* padding: 35px; */
+
+  /* transform: skewY(60deg) rotate(15deg); */
+}
+.signature svg {
+  /* width: 150px; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+.signature:hover {
+  outline: 2px solid black;
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		color: var(--textColor);
-		background: var(--background);
-	}
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: var(--textColor);
+    background: var(--background);
+  }
 }

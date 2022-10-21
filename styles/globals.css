@@ -66,42 +66,50 @@ a {
 	/* top: 30px; */
 }
 .slices {
-	position: fixed;
-	/* display: flex; */
+	position: absolute;
+	display: flex;
 	/* justify-content: center; */
-	/* align-self: center; */
+	align-self: center;
 	flex-direction: column;
 	transform: rotate(180deg);
 	/* border-radius: 50%; */
 	/* width: 500px; */
-	/* margin: 0 auto; */
-	left: 65%;
-	top: 50%;
+	margin: 0 auto;
+
+	left: 60%;
+	top: 55%;
 	/* transform: translate(50%, 50%); */
 	/* gap: 100px; */
 }
 .sliceInner {
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: center; */
 	/* outline: 3px solid var(--lightBlue); */
-	width: 450px;
-	padding: 0;
-	margin: 0 auto;
+	width: 550px;
+	height: 100px;
+	/* align-self: flex-end; */
+	/* padding: 0; */
+	/* margin: 0 auto; */
 	/* top: -20px; */
 	background-color: var(--sliceBackground);
 	/* transform-origin: 100% 100%; */
 	/* top: 50%; */
 	/* left: 50%; */
 	/* border-top: 2px solid var(--outlineColor); */
-	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	/* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
 	/* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
 }
 .sliceOuter {
 	position: absolute;
+	width: 550px;
+	height: 300px;
 	outline: 3px solid white;
-	padding: 15px;
+	/* padding: 15px; */
 	/* top: 25%;  */
 	background-color: var(--background);
-	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 	/* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+	clip-path: polygon(-8% 50%, 100% 0%, 100% 100%);
 }
 .sliceOuter:hover {
 	outline: 2px solid white;
@@ -112,11 +120,11 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	justify-items: flex-start;
+	/* justify-items: flex-end; */
 	background-color: var(--background);
 }
 .signature svg {
-	width: 150px;
+	width: 250px;
 }
 .signature:hover {
 	outline: 2px solid black;

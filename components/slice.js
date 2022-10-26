@@ -31,7 +31,7 @@ const Slice = ({ item, rotateDegree }) => {
         position: "absolute",
         rotate: `${item.position * 30}deg`,
         // transform: `translate(-50%, -50%)`,
-        transform: `translateY(122%) translateX(0%)`,
+        transform: `translateY(438px) translateX(0%)`,
         // top: "75px",
         // left: "27.75%",
       }}

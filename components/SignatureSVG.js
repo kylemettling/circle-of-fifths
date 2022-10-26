@@ -28,12 +28,14 @@ const SignatureSVG = ({
   return (
     <div
       className="signature"
-      style={{
-        rotate: `-${degrees - rotateDegree + 180}deg`,
-        // transform: `translate(${50}%, ${50}%)`,
-        // top: '50%',
-        // left: '50%',
-      }}
+      style={
+        {
+          // rotate: `-${rotateDegree}deg`,
+          // transform: `translate(${50}%, ${50}%)`,
+          // top: '50%',
+          // left: '50%',
+        }
+      }
     >
       {/* <span>{count}</span> */}
       <svg
@@ -147,12 +149,12 @@ const SignatureSVG = ({
           </g>
         </svg>
       </svg>
-      <span>{item.major}</span>
+      {/* <span>{item.major}</span>
       <span>
         {count}
         {"-"}
         {type}
-      </span>
+      </span> */}
     </div>
   );
 };

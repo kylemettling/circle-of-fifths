@@ -63,6 +63,9 @@ a {
   /* top: 50%; */
   /* offset-anchor: center; */
 }
+.no-scroll {
+  background-color: red;
+}
 .sliceContainer {
   /* position: fixed; */
   /* display: flex; */
@@ -120,6 +123,9 @@ a {
 }
 .signature:hover {
   outline: 2px solid black;
+}
+.rotate {
+  z-index: 9999;
 }
 
 @media (prefers-color-scheme: dark) {

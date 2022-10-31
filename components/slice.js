@@ -1,5 +1,6 @@
+import { useState } from "react";
 import SignatureSVG from "./SignatureSVG";
-const Slice = ({ item, rotateDegree }) => {
+const Slice = ({ item, rotateDegree, handleDrag }) => {
   const accidentalCoords = {
     sharp: [
       { x: "730", y: "540" },
@@ -24,6 +25,7 @@ const Slice = ({ item, rotateDegree }) => {
     height: "720px",
     width: "720px",
   };
+
   return (
     <div
       className="slice"
@@ -31,10 +33,13 @@ const Slice = ({ item, rotateDegree }) => {
         position: "absolute",
         rotate: `${item.position * 30}deg`,
         // transform: `translate(-50%, -50%)`,
-        transform: `translateY(438px) translateX(0%)`,
+        transform: `translateY(379px) translateX(0%)`,
+        // transform: `translateY(438px) translateX(0%)`,
         // top: "75px",
         // left: "27.75%",
       }}
+      onMouseMove={handleDrag}
+      // onMouseDown={(e) => handleDrag(e.target)}
     >
       <SignatureSVG
         item={item}
@@ -45,8 +50,8 @@ const Slice = ({ item, rotateDegree }) => {
         position={item.position}
         degrees={item.position * 30}
         rotateDegrees={rotateDegree}
-        height={"150px"}
-        width={"150px"}
+        height={"125px"}
+        width={"125px"}
       />
     </div>
   );

@@ -48,6 +48,9 @@ a {
   /* position: fixed; */
   /* top: 30px; */
 }
+.wrapper.slices {
+  position: absolute;
+}
 .slices {
   position: absolute;
   /* display: flex; */

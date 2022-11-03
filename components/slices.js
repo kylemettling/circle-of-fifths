@@ -84,7 +84,6 @@ const Slices = () => {
       </div>
       <div className="sliceContainer">
         <div
-          className="slices"
           style={{
             //   position: "fixed",
             display: "flex",
@@ -104,6 +103,7 @@ const Slices = () => {
             //   left: "50%",
             zIndex: -1,
           }}
+          className="slices"
           onWheel={handleWheel}
           ref={slicesRef}
         >

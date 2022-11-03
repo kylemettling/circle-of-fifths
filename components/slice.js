@@ -28,31 +28,40 @@ const Slice = ({ item, rotateDegree, handleDrag }) => {
 
   return (
     <div
-      className="slice"
+      className="wrapper"
       style={{
         position: "absolute",
         rotate: `${item.position * 30}deg`,
+        transformOrigin: "center",
         // transform: `translate(-50%, -50%)`,
-        transform: `translateY(379px) translateX(0%)`,
-        // transform: `translateY(438px) translateX(0%)`,
+        // transform: `translateY(379px) translateX(0%)`,
+        // transform: `translateY(${}%) translateX(0%)`,
+        transform: `translateY(438px)`,
         // top: "75px",
         // left: "27.75%",
       }}
       onMouseMove={handleDrag}
       // onMouseDown={(e) => handleDrag(e.target)}
     >
-      <SignatureSVG
-        item={item}
-        index={item.index}
-        type={item.accidentals.type}
-        count={item.accidentals.count}
-        accidentalCoords={accidentalCoords}
-        position={item.position}
-        degrees={item.position * 30}
-        rotateDegrees={rotateDegree}
-        height={"125px"}
-        width={"125px"}
-      />
+      <div
+        className="slice"
+        style={{
+          rotate: `-${item.position * 30 - rotateDegree}deg`,
+        }}
+      >
+        <SignatureSVG
+          item={item}
+          index={item.index}
+          type={item.accidentals.type}
+          count={item.accidentals.count}
+          accidentalCoords={accidentalCoords}
+          position={item.position}
+          degrees={item.position * 30}
+          rotateDegrees={rotateDegree}
+          height={"125px"}
+          width={"125px"}
+        />
+      </div>
     </div>
   );
 };
